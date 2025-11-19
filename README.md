@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js App (AI Tools)
 
-## Getting Started
+Small Next.js app with AI-assisted pages and utilities.
 
-First, run the development server:
+## Quick start
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Install dependencies:
+```sh
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run dev server:
+```sh
+npm run dev
+```
+(See scripts in [package.json](package.json).)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Key files
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- App entry/layout: [`app.layout`](app/layout.js) — [app/layout.js](app/layout.js)  
+- Root page: [`app.page`](app/page.js) — [app/page.js](app/page.js)  
+- Navigation component: [`Navigation`](components/Navigation.jsx) — [components/Navigation.jsx](components/Navigation.jsx)  
+- API routes: [app/api](app/api)  
+- Feature pages:
+  - Blog ideas: [app/blog-ideas/page.js](app/blog-ideas/page.js)  
+  - Explain code: [app/explain-code/page.js](app/explain-code/page.js)  
+  - Grammar: [app/grammar/page.js](app/grammar/page.js)  
+  - Paraphrase: [app/paraphrase/page.js](app/paraphrase/page.js)  
+  - Text summary: [app/text-summary/page.js](app/text-summary/page.js)  
+  - Translate: [app/translate/page.js](app/translate/page.js)
 
-## Learn More
+## Styling
 
-To learn more about Next.js, take a look at the following resources:
+Global CSS lives in [app/globals.css](app/globals.css).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build & Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Build: `npm run build` (configured in [package.json](package.json))
+- Production preview: `npm start`
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- This project uses Next.js app router; see [app/layout.js](app/layout.js) and [app/page.js](app/page.js) for structure.
+- Public assets: [public](public)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+Open a PR, add tests, and ensure dev server builds.
